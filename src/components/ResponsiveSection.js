@@ -1,48 +1,50 @@
-import { Container, Box  } from '@mui/material'
-import ResponsiveCard from './ResponsiveCard'
-import Profile from './Profile'
+import { Box, Typography } from "@mui/material";
+import ResponsiveCard from "./ResponsiveCard";
 
-const ResponsiveSection = ({ backgroundColor, border, borderRadius, height, width, title, content, data }) => {
- console.log(typeof(content));
+const ResponsiveSection = ({
+  backgroundColor,
+  border,
+  borderRadius,
+  height,
+  width,
+  title,
+  content,
+  data,
+}) => {
   return (
-   
-    <Box marginTop={5} mx={5} justifySelf='center'
-         sx={{
-          backgroundColor: backgroundColor || 'white' ,
-          border: border || '3px solid black',
-          display: 'flex',
-          borderRadius: borderRadius || '5%',
-          height: height || '650px',
-          width: width || '100%',
-         
-        // Mobile (<600px)
-        padding: '16px', // Small padding
-        maxWidth: '100%', // Full-width
-        backgroundColor: 'lightgreen',
-        
-        // Tablet (600px-960px)
-        '@media (min-width: 600px) and (max-width: 960px)': {
-          padding: '24px', // Medium padding
-          maxWidth: '90%',
-          backgroundColor: 'lightblue',
-        },
-        // Desktop (>960px)
-        '@media (min-width: 960px)': {
-          padding: '32px', // Standard padding
-          maxWidth: '1200px',
-          backgroundColor: 'lightpink',
-        },
-          justifyContent: 'center',
-          justifyItems: 'center',
-        }} >
-      <Container> 
-          
-         {data && <ResponsiveCard data={data}/>}
-         <Profile />
-       {content}
-       {title}
-       
-        </Container>
+    <Box
+      marginTop={5}
+      mx={5}
+      justifySelf="center"
+      sx={{
+        backgroundColor: backgroundColor || "white",
+        border: border || "3px solid black",
+        display: "flex",
+        flexDirection: "column",
+        borderRadius: borderRadius || "5%",
+        height: height || "90vh",
+        width: width || "90vw",
+        padding: "16px",
+        maxWidth: "100%",
+        justifyContent: "center",
+        justifyItems: "center",
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: "700",
+          letterSpacing: "-1px",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
+          color: "primary.main",
+          textAlign: "center",
+        }}
+      >
+        {" "}
+        {title}
+      </Typography>
+      <>{content}</>
     </Box>
-)}
-export default ResponsiveSection
+  );
+};
+export default ResponsiveSection;
