@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import ResponsiveCard from "./ResponsiveCard";
+// import ResponsiveCard from "./ResponsiveCard";
 
 const ResponsiveSection = ({
   backgroundColor,
@@ -11,21 +11,22 @@ const ResponsiveSection = ({
   content,
   data,
 }) => {
+  
   return (
+    
     <Box
-      marginTop={5}
-      mx={5}
-      justifySelf="center"
-      sx={{
+     sx={{
+        marginTop:{ xs: 2, md: 5 },
+        mx: { xs: 2, sm: "auto" },
         backgroundColor: backgroundColor || "white",
         border: border || "3px solid black",
         display: "flex",
         flexDirection: "column",
-        borderRadius: borderRadius || "5%",
-        height: height || "90vh",
-        width: width || "90vw",
-        padding: "16px",
-        maxWidth: "100%",
+        borderRadius: borderRadius || { xs: "12px", md: "24px" },
+        height: height || { xs: "auto", md: "80vh" },
+        width: width || { xs: "95vw", sm: "90vw", lg: "80vw" },
+        padding: { xs: "16px", md: "32px" },
+        maxWidth: "1200px",
         justifyContent: "center",
         justifyItems: "center",
       }}

@@ -1,10 +1,12 @@
+import ResponsiveTable from "./components/ResponsiveTable";
 import ResponsiveSection from "./components/ResponsiveSection";
 import Profile from "./components/Profile";
 import CardsPage from "./components/CardsPage";
-import Tab from "./components/Tab"
+import Tab from "./components/Tab";
+import { data2 } from "./utility/data";
 
 function App() {
-  
+
   return (
     <div className="App">
       <ResponsiveSection
@@ -12,7 +14,6 @@ function App() {
         title={"Kinjal"}
         content={<Profile/>}
       />
-
       <ResponsiveSection border="2px solid blue" />
       <ResponsiveSection content={<CardsPage />} />
       <ResponsiveSection
@@ -20,8 +21,10 @@ function App() {
         backgroundColor={"text.secondary"}
         content={"This is Responsive Section 2"}
       />
-      <ResponsiveSection content={<Tab/>} />
-    </div>
+      <ResponsiveSection border="1px solid blue" content={<Tab/>} />  
+      <ResponsiveSection content={<ResponsiveTable data={data2} />} />
+      
+      </div>
   );
 }
 

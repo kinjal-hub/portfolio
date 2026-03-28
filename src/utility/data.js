@@ -1,4 +1,6 @@
-
+import Section1 from "../components/Tab Components/Section1";
+import Section2 from "../components/Tab Components/Section2";
+import Section3 from "../components/Tab Components/Section3";
 
 export const profileArray = [
   {
@@ -77,7 +79,98 @@ export const cardData = [
 ];
 
 export const tabData = [
-    { value: '1', label: 'Tab#1', info: 'Content#1' },
-    { value: '2', label: 'Tab#2', info: 'Content#2' },
-    { value: '3', label: 'Tab#3', info: 'Content#3' },
+    {  label: 'Tab#1', component:<Section1 /> , apiUrl:"https://api.chucknorris.io/jokes/random"},
+    {  label: 'Tab#2', component:<Section2 /> , apiUrl:"https://catfact.ninja/fact"},
+    {  label: 'Tab#3', component:<Section3 />, apiUrl:"https://dog.ceo/api/breeds/image/random" },
   ];
+
+
+  // export const StudentClass1 = [
+  //     { id: 1, Name: "Sairam dave", class:11, Sub:"Biology", Teacher:"Arpita Macwan" , stream:"Science"},
+  //     { id: 2, Name: "Nikita gandhi ", class:12, Sub:"Maths", Teacher:"Kristina doe", stream:"Science"},
+  //     { id: 3, Name: "Krystal desoza", class:12, Sub:"Biology", Teacher:"Sruti kristi", stream:"Science"},
+  //     { id: 4, Name: "Jane doe", class:12, Sub:"Economics", Teacher:"Sruti sirpali", stream:"Commerce"},
+  //     { id: 3, Name: "Jhon doe", class:12, Sub:"History", Teacher:"Sruti parmar", stream:"Arts"},
+  // ];
+
+
+  export const data1 = [
+  {
+    "firstName": "Aarav",
+    "lastName": "Sharma",
+    "age": 14,
+    "subject": "Math"
+  },
+  {
+    "firstName": "Ananya",
+    "lastName": "Iyer",
+    "age": 15,
+    "subject": "Science"
+  },
+  {
+    "firstName": "Rohan",
+    "lastName": "Patel",
+    "age": 13,
+    "subject": "English"
+  },
+  {
+    "firstName": "Meera",
+    "lastName": "Reddy",
+    "age": 16,
+    "subject": "Math"
+  },
+  {
+    "firstName": "Kabir",
+    "lastName": "Singh",
+    "age": 14,
+    "subject": "Science"
+  }
+];
+
+export const data2 = [
+  {
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "famousFood": "Dhokla",
+    "populationMillions": 8.7
+  },
+  {
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "famousFood": "Dal Baati Churma",
+    "populationMillions": 3.9
+  },
+  {
+    "city": "Kochi",
+    "state": "Kerala",
+    "famousFood": "Appam",
+    "populationMillions": 2.1
+  },
+  {
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "famousFood": "Tunday Kebab",
+    "populationMillions": 3.4
+  },
+  {
+    "city": "Pune",
+    "state": "Maharashtra",
+    "famousFood": "Misal Pav",
+    "populationMillions": 7.4
+  }
+];
+
+export const data3 = [
+  {id:1, firstName:'shaun', lastName:'chuahan'},
+  {id:2, firstName:'Montu', lastName:'parmar'},
+  {id:3, firstName:'Azeal', lastName:'kristi'},
+];
+
+
+export const productData = [
+{ id: 1, name: 'Phone', price: '$999' },
+{ id: 2, name: 'Laptop', price: '$1499' }
+];
+
+
+

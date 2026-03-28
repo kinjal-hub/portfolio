@@ -6,11 +6,11 @@ const CardsPage = () => {
     <>
       <ResponsiveCard
         data={cardData}
-        width={300}
-        height={200}
-        margin={"10px 10px"}
-        padding={"10px"}
-        direction={"row"}
+        // width={300}
+        // height={200}
+        // margin={"10px 10px"}
+        // padding={"10px"}
+        // direction={"row"}
       ></ResponsiveCard>
     </>
   );

@@ -10,11 +10,13 @@ const ResponsiveCard = ({
   padding,
   cardContentDirection,
 }) => {
+  
   return (
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: direction ?? "column" },
+        direction: { xs: "row", md: "column" },
+        gap: 1
       }}
     >
       {data?.map((item, index) => (
@@ -40,7 +42,8 @@ const ResponsiveCard = ({
               gutterBottom
               variant="h5"
               component="div"
-              sx={{ color: "warning.main" }}
+              sx={{ color: "warning.main" , fontSize: {xs:'1rem', sm:'1.5rem', md:'2rem'}}}
+              
             >
               {item.title}
             </Typography>
@@ -59,7 +62,11 @@ const ResponsiveCard = ({
             {item?.info?.map((infoItem, infoIndex) => (
               <Typography
                 variant="body2"
-                sx={{ color: "text.primary" }}
+                sx={{ color: "text.primary" , fontSize: {
+                       xs: '0.75rem', 
+                       sm: '0.875rem', 
+                      md: '1rem',     
+                    },}}
                 key={infoIndex}
               >
                 • {infoItem}
